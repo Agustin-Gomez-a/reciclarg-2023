@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://reciclarg.cloud/cesto.png" type="image/x-icon">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/script.js"></script>
+  <script type="text/javascript" src="https://myaskai.com/embed-chat-js-min"
+    id="1jQl7a2lWYvjDTcrJmR9NbTgrjlnUV"></script>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtXaHO0zcrYOwz0QIA66C3iQaxEniZbEs&callback=initMap&libraries=geometry"
+    async defer>
+    </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+  <title>Reciclarg</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<!-- Navbar -->
+<header>
+  <!-- Navbar goes here -->
+  <nav class="bg-white shadow-lg px-1">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <div>
+            <!-- Website Logo -->
+            <a href="#" class="flex items-center py-4 px-2">
+              <img
+                src="https://w7.pngwing.com/pngs/963/751/png-transparent-test-case-logo-software-testing-engineering-use-case-business-blue-people-innovation.png"
+                alt="Logo" class="h-8 w-8 mr-2">
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Inicio</a>
+            <a href=""
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Nosotros</a>
+            <a href=""
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">recompensas</a>
+            <a href=""
+              class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Encuestas</a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- End of Mobile menu button -->
+        <!-- Secondary Navbar items -->
+        <div class="hidden md:flex items-center space-x-3 ">
+          <a href="/login.html"
+            class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Registrarse</a>
+          <a href="/register.html"
+            class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300 none">Logearse</a>
+        </div>
+      </div>
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div class="hidden mobile-menu">
+
+
+        <ul class="pt-4 pb-3">
+
+          <li>
+            <a href="/login.html"
+              class="text-center block pl-4 text-sm font-semibold text-gray-900 hover:bg-green-500 hover:text-white transition duration-300 py-2">Registrarse</a>
+          </li>
+          <li>
+            <a href="/register.html"
+              class="text-center  block pl-4 text-sm font-semibold text-gray-900 hover:bg-green-500 hover:text-white transition duration-300 py-2">Logearse</a>
+          <li>
+
+          <li>
+            <a href=""
+              class="block pl-4 text-sm font-semibold text-gray-900 hover:bg-green-500 transition hover:text-white duration-300 py-2">Inicio</a>
+          </li>
+          <li>
+            <a href=""
+              class="block pl-4 text-sm font-semibold text-gray-900 hover:bg-green-500 transition hover:text-white duration-300 py-2">recompensas</a>
+          </li>
+          <li>
+            <a href=""
+              class="block pl-4 text-sm font-semibold text-gray-900 hover:bg-green-500 transition hover:text-white duration-300 py-2">Encuestas</a>
+          </li>
+          <li>
+          <li>
+
+          </li>
+
+
+          <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+              menu.classList.toggle("hidden");
+            });
+          </script>
+  </nav>
+
+</header>
+
+
+
+
+
+
+<!-- 
+          <div class="flex items-center gap-6 sm:flex sm:gap-4 space-x-2 ">
+          <button class="rounded-md bg-amber-100 px-5 py-2.5 text-sm font-bold text-teal-600 shadow my-50 ">Registro</button>
+          <button class="rounded-md bg-amber-100 px-5 py-2.5 text-sm font-bold text-teal-600 shadow ">Ingresar</button>
+        </div> -->
+
+
+
+
+
+
+<!-- End Navbar -->
+
+
+<!-- Section Puntos -->
+
+<section class="shadow-lg">
+  <div class=" .h-auto px-4  py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 bg-cover "
+    style=" background-image: url('img/ecovidrio-bg-inv.jpg') ">
+    <div class="  text-lg .h-auto grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
+      <div class="mx-auto max-w-lg text-center lg:mx-0 ltr:lg:text-left rtl:lg:text-right">
+        <h2 id="puntos-inf" class="text-lg  font-bold sm:text-7xl">Busca los puntos
+          mas cercanos
+          para poder
+          reciclar.
+
+        </h2>
+
+
+
+        <a id="saber-mas" href="#"
+          class="mt-8 inline-block rounded bg-amber-100 px-12 py-3 text-sm font-bold text-teal-600 transition hover:bg-teal-600 focus:outline-none focus:ring focus:ring-amber-100 border-0 !important">
+          Saber Más
+        </a>
+      
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</section>
+<!-- Fin Section Puntos -->
+
+<!-- Inicio de Contenedores -->
+<br><br><br><br><br>
+<!-- Container for demo purpose -->
+<div class="container my-24 px-6 mx-auto">
+
+  <!-- Section: Design Block -->
+  <section class="mb-32 text-gray-800 text-center">
+    <h2 class="text-3xl font-bold mb-20">Why is it so great?</h2>
+
+    <section>
+      <div class="grid lg:gap-x-12 lg:grid-cols-3">
+        <div class="mb-12 lg:mb-0">
+          <div class="rounded-lg shadow-lg h-full block card card-active">
+            <div class="flex justify-center">
+              <div class="p-4 bg-green-500 rounded-full shadow-lg inline-block -mt-8">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!-- Contenido del SVG -->
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-lg font-semibold mb-4">Contenedor Verde</h5>
+              <p>
+                El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.
+              </p>
+              <button class="relative btn4 mt-12 px-10 py-7 border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden" type="button">
+                <span class="absolute inset-x-0 h-3 bottom-0 bg-green-600"></span>
+                saber más
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="mb-12 lg:mb-0">
+          <div class="rounded-lg shadow-lg h-full block card">
+            <div class="flex justify-center">
+              <div class="p-4 bg-amber-400 rounded-full shadow-lg inline-block -mt-8">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!-- Contenido del SVG -->
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-lg font-semibold mb-4">Contenedor Amarillo</h5>
+              <p>
+                El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases.
+              </p>
+              <button class="relative btn4 mt-12 px-10 py-7 border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden" type="button">
+                <span class="absolute inset-x-0 h-3 bottom-0 bg-amber-400"></span>
+                saber más
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="mb-12 lg:mb-0">
+          <div class="rounded-lg shadow-lg h-full block card">
+            <div class="flex justify-center">
+              <div class="p-4 bg-blue-600 rounded-full shadow-lg inline-block -mt-8">
+                <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!-- Contenido del SVG -->
+                </svg>
+              </div>
+            </div>
+            <div class="p-6">
+              <h5 class="text-lg font-semibold mb-4">Contenedor Azul</h5>
+              <p>
+                El contenedor azul es el correspondiente para depositar papel y cartón.
+              </p>
+              <button class="relative btn4 mt-12 px-10 py-7 border border-white uppercase font-semibold tracking-wider leading-none overflow-hidden" type="button">
+                <span class="absolute inset-x-0 h-3 bottom-0 bg-blue-600"></span>
+                saber más
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  <!-- Section: Design Block -->
+
+</div>
+<!-- Container for demo purpose -->
+
+<!-- <div class="section_our_solution"
+  style=" background-image: url('https://www.ecovidrio.es/sites/default/files/2019-10/background-home-1.png') ">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="our_solution_category">
+        <div class="solution_cards_box">
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+            <div class="solu_title">
+              <h3>Contenedor Amarillo
+              </h3>
+            </div>
+            <div class="solu_description">
+              <p>
+                El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases.
+              </p>
+              <button type="button" class="read_more_btn">Mas información</button>
+            </div>
+          </div>
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+            <div class="solu_title">
+              <h3>Contenedor Verde
+              </h3>
+            </div>
+            <div class="solu_description">
+              <p>
+                El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.
+              </p>
+              <button type="button" class="read_more_btn">Mas información</button>
+            </div>
+          </div>
+          <div class="solution_card">
+            <div class="hover_color_bubble"></div>
+            <div class="solu_title">
+              <h3>Contenedor Verde
+              </h3>
+            </div>
+            <div class="solu_description">
+              <p>
+                El contenedor verde, también conocido como iglú verde, es el destinado para depositar vidrio.
+              </p>
+              <button type="button" class="read_more_btn">Mas información</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!--  -->
+    <!-- </div>
+  </div>
+</div>
+</div>
+<br><br><br><br> -->
+<!-- Fin de Contenedores -->
+
+
+<div class="container mx-auto relative">
+  <div id="map" style="height: 400px; width: 100%;"></div>
+  <div class="absolute bottom-0 left-0 mb-4 ml-4">
+    <button id="button"
+      class="bg-teal-600 text-amber-100 hover:bg-green-600  font-bold py-2 px-4 border rounded-full">Punto
+      Ecológico más cercano</button>
+  </div>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtXaHO0zcrYOwz0QIA66C3iQaxEniZbEs&callback=initMap&libraries=geometry"
+    async defer></script>
+</div>
+
+
+</div>
+
+
+
+<br><br>
+
+
+
+
+<div class="h-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16" style="background-image: url('https://www.wallpapertip.com/wmimgs/80-807379_blur-background.jpg');
+            background-size: cover;
+            backdrop-filter: blur">
+
+  <!--https://images.pexels.com/photos/1555199/pexels-photo-1555199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  -->
+  <!-- Contenedor de datos -->
+  <h2 id="puntos-inf" class="text-center  font-bold sm:text-3xl"> A continuación, Veremos contenedores de reciclaje
+    según su color:
+
+    <br><br><br>
+    <a href="" class="group relative block h-64 sm:h-80 container mx-auto max-w-md">
+      <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+      <div
+        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+        <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8 ">
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="52" height="52"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#FBBF24" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 7h16" />
+            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+            <path d="M10 12l4 4m0 -4l-4 4" />
+          </svg>
+
+          <h2 class="mt-4 text-xl font-medium sm:text-2xl">Contenedor Amarillo</h2>
+        </div>
+
+        <div
+          class="absolute p-4 opacity-0 transition- opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+          <h3 class="mt-4 text-xl font-medium sm:text-2xl">Contenedor Amarillo</h3>
+
+          <p class="mt-4 text-sm sm:text-base">
+            El contenedor amarillo es el adecuado para reciclar plásticos, latas y envases. En este tipo de contenedores
+            se debe almacenar todo material que esté hecho a base de plástico. Como botellas de plástico, envases de
+            alimentos, bolsas de plástico, briks de leche, etc. También las latas de conserva y de refrescos deben
+            depositarse en el contenedor amarillo
+          </p>
+
+        </div>
+      </div>
+    </a>
+
+
+
+    <br><br> <br>
+
+    <a href="" class="group relative block h-64 sm:h-80 container mx-auto max-w-md  ">
+      <span class="absolute inset-0 border-2 border-dashed border-black"></span>
+
+      <div
+        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+        <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="44" height="44"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 7h16" />
+            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+            <path d="M10 12l4 4m0 -4l-4 4" />
+          </svg>
+
+          <h2 class="mt-4 text-xl font-medium sm:text-2xl">Contenedor Verde</h2>
+        </div>
+
+        <div
+          class="absolute p-4 opacity-0 transition- opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+          <h3 class="mt-4 text-xl font-medium sm:text-2xl">Contenedor verde</h3>
+
+          <p class="mt-4 text-sm sm:text-base">
+            El contenedor verde, también conocido como iglú verde, es para depositar vidrio. En él deben reciclarse
+            botellas de vidrio, tarros, espejos y cristales rotos, pero no cerámica, porcelana, metales ni plásticos.
+            Antes de tirar una botella o tarro de vidrio, hay que quitarle el tapón y reciclarlo en el contenedor
+            correspondiente para metal, plástico o corcho. </p>
+
+        </div>
+      </div>
+    </a>
+
+
+
+    <br><br> <br><br>
+    <a href="" class="group relative block h-64 sm:h-80 container mx-auto max-w-md ">
+      <span class="absolute inset-0 border-2 border-dashed border-black "></span>
+
+      <div
+        class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+        <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="52" height="52"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#1E40AF" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 7h16" />
+            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+            <path d="M10 12l4 4m0 -4l-4 4" />
+          </svg>
+
+          <h2 class="mt-4 text-xl font-medium sm:text-2xl">Contenedor azul</h2>
+        </div>
+
+        <div
+          class="absolute p-4 opacity-0 transition- opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+          <h3 class="mt-4 text-xl font-medium sm:text-2xl ">Contenedor azul</h3>
+
+          <p class="mt-4 text-sm sm:text-base ">
+
+            El contenedor azul es para depositar papel y cartón, incluyendo cajas, envases de cartón, periódicos,
+            revistas, documentos, entre otros. Se debe plegar el cartón para optimizar el espacio del contenedor.
+          </p>
+
+        </div>
+      </div>
+    </a>
+</div>
+<br><br>
+<!-- Fin Contenedores de datos-->
+
+
+<!-- Fin  -->
+<!-- Formulario-->
+
+<div class="h-screen w-full grid place-items-center bg-slate-100">
+  <div class="bg-white rounded-md shadow-md flex flex-row">
+    <!-- contact information form -->
+    <div class="bg-green-700 p-10 hover:bg-green-800 rounded-md transition md:block" id="contact_info">
+      <div class="flex justify-between">
+        <h2 class="text-white text-xl ">Contact Information</h2>
+        <h2 class="text-white text-xs flex flex-row md:hidden block cursor-pointer" id="swtich_to_contact_us">Contact Us
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg></h2>
+      </div>
+      <div class="mt-6 flex flex-row">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-slate-200 text-xs b">Name :</h2>
+          <p class="text-white text-xs">David Warner</p>
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-row">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-slate-200 text-xs">Email :</h2>
+          <p class="text-white text-xs">davidwarner323@xyz.com</p>
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-row">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-slate-200 text-xs">Teléfono</h2>
+          <p class="text-white text-xs">123-456-789-01</p>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-row">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-200 mr-2" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+        </div>
+        <div>
+          <h2 class="text-slate-200 text-xs">Dirección</h2>
+          <p class="text-white text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+            dolores.</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- get in touch form -->
+    <div class="px-6 py-8" id="contact_us">
+      <div class="flex justify-between">
+        <h2 class="text-blue-800 text-xl">Get In Touch</h2>
+        <h2 class="text-red-800 text-xs flex flex-row md:hidden block cursor-pointer" id="swtich_to_contact_info">
+          Contact Info <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd" />
+          </svg></h2>
+      </div>
+      <input type="text" placeholder="Ingrese su nombre"
+        class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm bg-white"><br>
+      <input type="text" placeholder="Ingrese su apellido"
+        class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm bg-white"><br>
+      <input type="text" placeholder="Ingrese su mail"
+        class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm bg-white"><br>
+      <input type="text" placeholder="Subject"
+        class="w-full text-xs px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm bg-white"><br>
+      <textarea placeholder="Ingresa tu consulta"
+        class="bg-white w-full text-xs px-3 py-2 h-20 my-2 outline-none rounded-md border focus:shadow-sm resize-none "></textarea><br>
+      <input type="submit " value="Send"
+        class="text-center bg-green-700 px-4 py-2 rounded-md text-white text-xs cursor-pointer hover:shadow-md hover:bg-green-800">
+    </div>
+
+  </div>
+</div>
+</body>
+
+
+<script>
+  let contact_info = document.querySelector('#contact_info');
+  let contact_us = document.querySelector('#contact_us');
+  let swtich_to_contact_us = document.querySelector('#swtich_to_contact_us');
+  let swtich_to_contact_info = document.querySelector('#swtich_to_contact_info');
+
+  swtich_to_contact_us.addEventListener("click", () => {
+    contact_info.style.display = 'none';
+    contact_us.style.display = 'block';
+  });
+
+  swtich_to_contact_info.addEventListener("click", () => {
+    contact_info.style.display = 'block';
+    contact_us.style.display = 'none';
+  });
+
+</script>
+
+<!-- end formulario -->
+</body>
+<!-- footer -->
+<FOOter>
+  <div
+    class="bg-gradient-to-r from-green-600 to-teal-600 max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8 tails-selected-element"
+    contenteditable="true">
+    <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+      <div class="px-5 py-2">
+        <a href="#" class="text-base leading-6 text-amber-100 hover:text-amber-100">
+          About
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a href="#" class="text-base leading-6 text-amber-100 hover:text-amber-100">
+          Blog
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a href="#" class="text-base leading-6 text-amber-100 hover:text-amber-100">
+          Team
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a href="#" class="text-base leading-6 text-amber-100 hover:text-amber-100">
+          Pricing
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a href="#" class="text-base leading-6 text-amber-100 hover:text-amber-100">
+          Contact
+        </a>
+      </div>
+      <div class="px-5 py-2">
+        <a href="#" class="text-base leading-6 text-amber-100 hover:text-amber-100">
+          Terms
+        </a>
+      </div>
+    </nav>
+    <div class="flex justify-center mt-8 space-x-6">
+      <a href="#" class="text-amber-100 hover:text-blue-700 cursor:cursor-pointer">
+        <span class="sr-only">Facebook</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd"
+            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <a href="#" class="text-amber-100 hover:text-rose-700">
+        <span class="sr-only">Instagram</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd"
+            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+            clip-rule="evenodd" class=""></path>
+        </svg>
+      </a>
+      <a href="#" class="text-amber-100 hover:text-cyan-400">
+        <span class="sr-only">Twitter</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+          </path>
+        </svg>
+      </a>
+      <a href="#" class="text-amber-100 hover:text-white">
+        <span class="sr-only">GitHub</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd"
+            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+
+    </div>
+
+  </div>
+</FOOter>
+<!-- <div class="md:max-w-md lg:col-span-2">
+          <span class="text-base font-medium tracking-wide text-gray-300">Subscribe for updates</span>
+          <form class="flex flex-col mt-4 md:flex-row">
+            <input placeholder="Email" required="" type="text"
+              class="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-black border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline" />
+            <button type="submit"
+              class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+              Subscribe
+            </button>
+          </DIV> -->
+
+<!-- Fin Footer-->
+
+
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script>
+<script src="./script.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+  }
+  
+  nav a {
+    text-decoration: none;
+  }
+  
+  /* Estilos para el encabezado */
+  header h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  header p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  /* Estilos para el contenido principal */
+  main {
+    margin-bottom: 4rem;
+  }
+  
+  article a:hover {
+    text-decoration: underline;
+  }
+  
+  article img {
+    max-height: 100%;
+  }
+  
+  /* Estilos para artículos recientes */
+  article.flex {
+    transition: all .2s;
+  }
+  
+  article.flex:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  article.flex .flex-1 p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    color: #3182ce;
+    transition: all .2s;
+  }
+  
+  a:hover {
+    color: #2c5282;
+    text-decoration: underline;
+  }
+  
+  /* Estilos para títulos */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #2d3748;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  h6 {
+    font-size: 0.875rem;
+  }
+  
+  /* Estilos para párrafos */
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #4a5568;
+  }

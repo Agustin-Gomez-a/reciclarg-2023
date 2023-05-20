@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap');
+
+/* formato a html */
+html {
+
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    /* font-weight: 500; */
+  
+  }
+  
+
+  /* formato a body */
+  body {
+    font-family: "Montserrat", sans-serif;
+  
+  
+  
+  }
+   
+  /* Colores */
+
+  :root {
+    --Verde-claro: #009640;
+  }
+  
+  :root {
+    --Verde-oscuro: #005746;
+  }
+  
+  :root {
+    --Negro: #212529;
+  }
+  :root {
+    --Gris-oscuro: #4A4A4A;
+  }
+  :root {
+    --Gris-claro: #8A8A8A;
+  }
+  :root {
+    --Color-crema: #FFF0BC;
+  }
+  /* Botones */
+
+  .button{
+  color: var(--Color-crema);
+  background-color: red;
+  }
+
+  #saber-mas{
+    text-decoration: none;
+  }
+  #saber-mas:hover{
+    color: var(--Color-crema);
+    
+  }
+
+
+  /* Medias */
+
+
+
+  /* ocultar botones de inicio de sesión y registro en dispositivos móviles */
+@media (max-width: 767px) {
+  header .md:flex:last-child {
+    display: none;
+  }
+}
+
+
+
+/* dar effecto en el hero */
+.card {
+  filter: blur(4px);
+  transition: filter 0.3s;
+}
+
+.card-active {
+  filter: none;
+}
+
+.card:hover {
+  filter: none;
+  transform: scale(1.06);
+}
+.card-blur {
+  filter: blur(4px);
+}
+
+
+
+
+
+
+
+/* mostrar menú de hamburguesa en dispositivos móviles */
+@media (max-width: 768px) { /* Ajusta el tamaño de pantalla según tus necesidades */
+  .hide-mobile {
+    display: none;
+  }
+}
+
+
+  --
+  /* formato universal */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  #puntos-inf{
+    color: var(--Verde-oscuro);
+   
+    
+  }
+
+
+
+/*  dar efectos a boton de features */
+.btn4 span{
+  transform: translateX(-101%);
+  transition: transform .2s ease-in
+}
+
+.btn4:hover span{
+  transform: translateX(0)
+}
+
+  /* CARDS */
+
+  .section_our_solution .row {
+    align-items: center;
+  }
+  
+  .our_solution_category {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .our_solution_category .solution_cards_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .solution_cards_box .solution_card {
+    flex: 0 50%;
+    background: var(--Verde-claro);
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 265px;
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover {
+    background: var(--Verde-oscuro);
+    color: var(--Color-crema);
+    transform: scale(1.1);
+    z-index: 9;
+  }
+  
+  .solution_cards_box .solution_card:hover::before {
+    background: rgb(85 108 214 / 10%);
+  }
+  
+  .solution_cards_box .solution_card:hover .solu_title h3,
+  .solution_cards_box .solution_card:hover .solu_description p {
+    color: var(--Color-crema);
+  }
+  
+  .solution_cards_box .solution_card:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+  }
+  
+  .solution_cards_box .solution_card:hover .solu_description button {
+    background: var(--Color-crema) !important;
+    color: var(--Verde-oscuro);
+  }
+  
+  .solution_card .so_top_icon {
+  }
+  
+  .solution_card .solu_title h3 {
+    color: var(--Negro);
+    font-size: 1.3rem;
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+  
+  .solution_card .solu_description p {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .solution_card .solu_description button {
+    border: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+      140deg,
+      --Verde-claro 0%,
+      --Verde-claro 50%,
+      --Verde-claro 75%
+    ) !important;
+    color: var(--Verde-oscuro);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 16px;
+  }
+  
+  .our_solution_content h1 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  .our_solution_content p {
+  }
+  
+  .hover_color_bubble {
+    position: absolute;
+    background: rgb(54 81 207 / 15%);
+    width: 100rem;
+    height: 100rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: 16rem;
+    border-radius: 50%;
+    transform: rotate(-36deg);
+    left: -18rem;
+    transition: 0.7s;
+  }
+  
+  .solution_cards_box .solution_card:hover .hover_color_bubble {
+    top: 0rem;
+  }
+  
+  .solution_cards_box .solution_card .so_top_icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--Negro);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .solution_cards_box .solution_card .so_top_icon img {
+    width: 40px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  /*start media query*/
+  @media screen and (min-width: 320px) {
+    .sol_card_top_3 {
+      position: relative;
+      top: 0;
+    }
+  
+    .our_solution_category {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .our_solution_category .solution_cards_box {
+      flex: auto;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .our_solution_category .solution_cards_box {
+      flex: 1;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .sol_card_top_3 {
+      position: relative;
+      top: -3rem;
+    }
+    .our_solution_category {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+ /* End card */
+/* Animacion del 404 */
+
+@keyframes move {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-404 {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+.animate-404 {
+  animation-name: moveIn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  
+}
+
+.animate-404:hover {
+  animation-name: moveOut, bounce;
+  animation-duration: 2s, 0.5s;
+  animation-iteration-count: infinite, 1;
+  animation-direction: alternate;
+  transform-origin: center;
+}
+/* Encuestas */
+
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
